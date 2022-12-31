@@ -3,7 +3,7 @@
 
 #The following vending machine lets the user choose the item they want to buy out of the given 2 categories.
 #User will enter their  money and will be refunded the remaining amount when they're done using the vending machine.
-#After buying an item user may or may not buy another item.
+#After buying an item user may another item if desired.
 #The machine follows a stock system. Items will run out of stock at a point and the user will be notified.
 
 
@@ -50,7 +50,7 @@ def VendingMachine():
             "item_id":"06",
             "item_name":"Juice ",
             "item_price":1.50,
-            "stock":5
+            "stock":1
         }
     g={
             "item_id":"07",
@@ -205,6 +205,7 @@ def VendingMachine():
                                 break
                         else: #Continues the process if user types yes
                             continue
+            
         
             
                          
@@ -242,6 +243,9 @@ def VendingMachine():
                                 break
                         else: #Continues the process if user types yes
                             continue 
+        if SelectedItem != i:
+            print("\nInvalid ID entered. Please try again.")
+            print("-------------------------------------------------------------------------")
 
                         
     
