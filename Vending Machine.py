@@ -10,7 +10,13 @@
 #Creating a VendingMachine function
 def VendingMachine():
 
-     #Display text
+    #Display time
+    import time
+    seconds = time.time()
+    local_time = time.ctime(seconds)
+    print("\n" + local_time.rstrip() + "\n")
+
+    #Display text
     print("\n\t\t     Welcome to the Vending Machine!\n\n-------------------------------------------------------------------------")
     
     #Creating categories
@@ -232,20 +238,19 @@ def VendingMachine():
                         print("Your remaining balance is :~ " + "AED " + str(cash)) #Tell the user their remaining balance in machine
                         question = input("Would you like to buy anything else? \nyes/no :~ ") #Ask if they want to buy anything else
                         print("-------------------------------------------------------------------------")
-                        if question == "no": #Code for when the user types no
+                        if question == "yes":
+                            continue
+                            
+                        elif question=="no": #Code for when the user types no
                             if cash != 0: #Returning the remaining cash after user is done
                                 print("AED " + str(cash) + " have been returned." + "\n-------------------------------------------------------------------------" )
                                 cash = 0
                                 print ("Thank you for using this vending  machine. Have a great day!\n-------------------------------------------------------------------------")
                                 break
-                            else:
-                                print ("Thank you for using this vending  machine. Have a great day!\n-------------------------------------------------------------------------")
-                                break
-                        else: #Continues the process if user types yes
-                            continue 
-        if SelectedItem != i:
-            print("\nInvalid ID entered. Please try again.")
-            print("-------------------------------------------------------------------------")
+                        break
+                     
+                    
+
 
                         
     
