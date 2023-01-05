@@ -218,7 +218,6 @@ def VendingMachine():
             continue
        
              
-            
     #Same code is used twice. Once for drinks and then for snacks as there are two lists being used instead of one
     #Taking user input to buy snacks while calculating cash   
         for i in AvailableSnacks:
@@ -253,8 +252,4 @@ def VendingMachine():
                         break
                      
                     
-
-
-                        
-    
 VendingMachine()
